@@ -11,21 +11,14 @@ const selectors = {
     postsGallery: document.querySelector(".gallery"),
     loader: document.querySelector(".loader"),
     loadMoreBtn: document.querySelector(".load-more"),
-
 };
-
 selectors.loader.classList.add("hidden");
 selectors.loadMoreBtn.classList.add("hidden");
-
 const lightbox = new SimpleLightbox(".gallery a");
-
 let page = 1;
 let totalHits = 0;
 let query = "";
-
-
 async function handleSubmit(event) {
-
     event.preventDefault();
     selectors.postsGallery.innerHTML = "";
     page = 1;
@@ -65,7 +58,6 @@ async function handleSubmit(event) {
 
     } catch (error) {
         iziToast.error({
-            title: "Error",
             message: `Something went wrong. ${error.message}`
         })
     } finally {
