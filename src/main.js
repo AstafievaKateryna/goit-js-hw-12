@@ -58,6 +58,7 @@ async function handleSubmit(event) {
 
     } catch (error) {
         iziToast.error({
+            title: "Error",
             message: `Something went wrong. ${error.message}`
         })
     } finally {
